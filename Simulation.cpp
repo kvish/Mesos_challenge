@@ -103,7 +103,7 @@ void Simulation::move_elevators(int id)
 				if (elevators[id].requests[i].pickupFloor == elevators[id].currFloor)
 				{
 					elevators[id].requests[i].pickedUp = true;
-					cout << "Elevator " << id << " is picking up someone at floor " << elevators[id].currRequest.pickupFloor;
+					cout << "Elevator " << id << " is picking up someone at floor " << elevators[id].currRequest.pickupFloor << endl;
 				}
 			}
 		}
