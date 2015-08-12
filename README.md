@@ -9,9 +9,9 @@ My approach is shortest seek time first, in which a request is given to the clos
 # Usage
 
 to compile run
-  g++ main.cpp Simulation.cpp -std=c++11
+  g++ main.cpp Simulation.cpp -std=c++11 -o elevator
 to run the executable
-  ./a.out
+  ./elevator
 
 Once you have started the executable there are 4 main operations available 
 - STATUS (gets the status of all elevators in the system)
