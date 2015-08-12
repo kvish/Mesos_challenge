@@ -15,7 +15,7 @@ int main() {
 	cout << endl << endl;
 
 
-	cout << "welcome to the elevator simulation CLI";
+	cout << "welcome to the elevator simulation CLI" << endl;
 	
 	//get number of elevators
 	cout << "enter the number of elevators: ";
