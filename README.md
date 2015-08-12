@@ -23,7 +23,7 @@ Once you have started the executable there are 4 main operations available
 
 this section explain more about how to run the timestep simulation
 
-an input file to the simulation follows the convention
+an input file to the simulation follows the convention  
 [timestamp] [pickupFloor] [dropoffFloor] 
 for each line. Lines in the file must be in ascending timestap order. An example input file can be found in test1.txt in this repository
 
