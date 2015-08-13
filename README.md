@@ -21,7 +21,9 @@ Once you have started the executable there are 4 main operations available
 
 # timestep 
 
-this section explain more about how to run the timestep simulation
+this section explain more about how to run the timestep simulation.
+
+The simulation assumes that in one time interval an elevator can move one floor only. People enter and exit the elevator instantly and once an elevator gets to a requested floor all people getting on or off do so.
 
 an input file to the simulation follows the convention  
 [timestamp] [pickupFloor] [dropoffFloor]  
