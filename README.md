@@ -14,10 +14,10 @@ to run the executable
   ./elevator
 
 Once you have started the executable there are 4 main operations available 
-- STATUS (gets the status of all elevators in the system)
-- IND_STATUS [elevator_id] (gets the status of an individual elevator)
-- REQUEST [pickup] [dropoff] (schedule an elevator request)
-- RUN [filename] (run a timestepped simulation)
+- status (gets the status of all elevators in the system)
+- ind_status [elevator_id] (gets the status of an individual elevator)
+- request [pickup] [dropoff] (schedule an elevator request)
+- run [filename] (run a timestepped simulation)
 
 # timestep 
 
@@ -28,6 +28,8 @@ The simulation assumes that in one time interval an elevator can move one floor 
 an input file to the simulation follows the convention  
 [timestamp] [pickupFloor] [dropoffFloor]  
 for each line. Lines in the file must be in ascending timestap order. An example input file can be found in test1.txt in this repository
+
+At the end of each timestamp a user must press enter to continue the simulation, this allows for easier debugging
 
 # Author
 Karan Vishwanathan
