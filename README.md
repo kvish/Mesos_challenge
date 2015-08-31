@@ -6,6 +6,8 @@ I began this simulation by trying a regular elevator algorithm in which elevator
 
 My approach is shortest seek time first, in which a request is given to the closest elevator and an elevator picks the closest floor to it to travel too. This approach is faster than a FCFS, because it tries to minimize "seek". However this approach isnt necesarily fair and can lead to starvation. I initially had all elevators start at floor 0, however to try and fix some of the fairness I started the elevators at equal intervals in the number of floors, this helps to engage all elevators in the system. This solution assumes that every floor in the system has an equal chance of being selected. I wanted to test waiting times of my algorithm against a general elevator algorithm however this didnt fit in the time constraints of the challenge.
 
+there are no UP or DOWN parameters explicitly in the request. UP or DOWN is assumed by the difference between the floors. Because this simulation uses a sstf algorithm UP or DOWN is not important because the closest elevator will respond. The <dropoff> floor is just the floor that the person will request once the elevator comes. The elevator is not aware of the dropoff floor for a user until it picks them up.
+
 # Usage
 
 to compile run
