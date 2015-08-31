@@ -1,6 +1,6 @@
 #include <iostream>
-#include "Simulation.h";
 #include <string>
+#include "Simulation.h"
 
 using namespace std;
 void displayHelp(); 
@@ -37,11 +37,11 @@ int main() {
 		cout << "input a command: ";
 		getline(cin, cmd);
 
-		if (cmd == "STATUS")
+		if (cmd == "status")
 		{
 			simulator.status();
 		}
-		else if (cmd == "IND_STATUS")
+		else if (cmd == "ind_status")
 		{
 			int id;
 			cin >> id;
@@ -55,7 +55,7 @@ int main() {
 
 			simulator.individual_status(id);
 		}
-		else if (cmd == "REQUEST")
+		else if (cmd == "request")
 		{
 			int pickup = 0;
 			int dropoff = 0;
@@ -64,17 +64,17 @@ int main() {
 
 			simulator.request(pickup, dropoff);
 		}
-		else if (cmd == "RUN")
+		else if (cmd == "run")
 		{
 			string filename;
 			getline(cin, filename);
 			simulator.run(filename);
 		}
-		else if (cmd == "HELP")
+		else if (cmd == "help")
 		{
 			displayHelp();
 		}
-		else if (cmd == "QUIT")
+		else if (cmd == "quit")
 		{
 			cout << "exiting simulation" << endl;
 			return 0;
@@ -88,6 +88,6 @@ int main() {
 
 void displayHelp() {
 	cout << endl;
-	cout << "available commands are STATUS (gets status of all elevators), IND_STATUS <INT> (gets status of an individual elevator), REQUEST <pickup> <dropoff> (makes a pickup reqeust), RUN <filename> (runs simulation from filename, details in README), or QUIT to exit simulation" << endl;
-	cout << "type HELP to see this message again" << endl;
+	cout << "available commands are status (gets status of all elevators), ind_status <INT> (gets status of an individual elevator), request <pickup_floor> <dropoff_floor> (makes a pickup reqeust), run <filename> (runs simulation from filename, details in README), or QUIT to exit simulation" << endl;
+	cout << "type help to see this message again or quit to exit" << endl;
 }

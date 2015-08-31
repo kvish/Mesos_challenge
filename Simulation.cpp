@@ -2,7 +2,7 @@
 #include<limits.h>
 #include<cmath>
 #include<fstream>
-#include "Simulation.h";
+#include "Simulation.h"
 #include <algorithm>
 
 
@@ -248,12 +248,14 @@ void Simulation::run(string filename)
 		//output the status of all elevators
 		if (pickup > numFloors || dropoff > numFloors)
 		{
-			cout << "this exceeds the number of floors in the building";
+			cout << "this exceeds the number of floors in the building" << endl;
 			continue;
 		}
 		if (!happened)
 		{
 			cout << "timestamp " << time << endl;
+			cout << "Press Enter to continue:" << endl;
+			cin.ignore();
 			status();
 			happened = true;
 		}
@@ -262,6 +264,8 @@ void Simulation::run(string filename)
 		while (time < timestamp)
 		{
 			time++;
+			cout << "Press Enter to continue:" << endl;
+			cin.ignore();
 			cout << "timestamp " << time << endl;
 			update_elevators();
 			status();
@@ -275,7 +279,9 @@ void Simulation::run(string filename)
 	while (track_active())
 	{
 		time++;
+		cout << "Press Enter to continue:" << endl;
 		cout << "timestamp " << time << endl;
+		cin.ignore();
 		update_elevators();
 		status();
 	}
